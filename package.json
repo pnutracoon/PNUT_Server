@@ -3,19 +3,32 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev src/index.ts",
+    "start": "ts-node src/index.ts",
+    "migrate": "prisma migrate dev",
+    "generate": "prisma generate",
+    "serve": "PORT=4433 serve src/index.ts",
+    "reset": "prisma migrate reset"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.1",
+    "@types/morgan": "^1.9.9",
+    "dotenv": "^16.4.5",
     "prisma": "^6.0.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.1",
+    "ethers": "^5.5.1",
     "express-session": "^1.17.3",
+    "morgan": "^1.10.0",
     "siwe": "^1.1.6",
     "ts-node": "^10.9.2"
   }
